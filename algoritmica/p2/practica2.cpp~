@@ -1,0 +1,157 @@
+#include <iostream>
+#include <cmath>
+#include "matriz.hpp"
+
+using namespace std;
+using namespace algoritmica;
+
+template <class T> void imprimirMatriz(const Matriz <T> &m);
+template <class T> T determinanteIterativo(Matriz <T> &m);
+template <class T> T determinanteRecursivo(Matriz <T> &m);
+
+int main()
+{
+
+	//variables para la matriz
+	int orden=0, inf=0, sup=0;
+
+	cout << "Introduzca el orden de la matriz" << endl;
+	cin >> orden;
+	cout << "Intervalo inferior de valores" << endl;
+	cin >> inf;
+	cout << "Intervalo superior de valores" << endl;
+	cin >> sup;
+
+	//declaracion de la matriz
+	Matriz <double> m(orden,orden);
+
+	double valorIterativo=0.0;
+	double valorRecursivo=0.0;
+
+	//cerr << "Asignado el orden" << endl;
+
+	m.rellenarMatriz(inf, sup);
+	//cerr << "Rellena la matriz" << endl;
+	m.verMatriz();
+
+	valorIterativo=determinanteIterativo(m);
+
+	cout << "Determinante iterativo: " << valorIterativo << endl;
+
+	valorRecursivo=determinanteRecursivo(m);
+
+	cout << "Determinante recursivo: " << valorRecursivo << endl;
+
+	return 0;
+
+}
+
+template <class T> T determinanteIterativo(Matriz <T> &m)
+{
+	int i,j,k,a;
+
+	T pivote=0.0, valor=0.0;
+	bool noCero=false;
+	T determinante=1.0;
+	Matriz <double> maux(m);
+
+	/*for(i=1;i<maux.filas();i++)
+	{
+		pivote=maux.elemento(i,i);
+		if(pivote == 0.0)
+		{
+			return -10000;
+		}
+		else
+		{
+			for(j=i;j<maux.columnas();j++)
+			{
+				maux.elemento(i,j,maux.elemento(i,j)/pivote);
+			}
+			for(k=1;k<maux.columnas();k++)
+			{
+				if(k!=i)
+				{
+					aux=maux.elemento(k,i);
+				}
+				for(j=i;j<maux.columnas();j++)
+				{
+					maux.elemento(k,j,(maux.elemento(k,j)-aux*maux.elemento(i,j)));
+				}
+			}
+		}
+	}*/
+	for(i=1;i<maux.filas();i++)
+	{
+		noCero=false;
+		a=i;//para recorrer la fila
+		while(noCero==false)
+		{
+			if(maux.elemento(a,i)!=0)
+				noCero=true;
+		}
+		pivote=maux.elemento(a,i); //hemos encontrado el pivote
+		for(j=1;j<maux.columnas();j++)
+		{
+			valor=maux.elemento(a,j);
+			maux.elemento(a,j,maux.elemento(i,j));
+			maux.elemento(i,j,valor/pivote);
+		}
+		for(j=1;j<maux.columnas();j++)
+		{
+			valor=maux.elemento(j,i);
+			for(k=1;k<maux.columnas();k++)
+			{
+				maux.elemento(j,k,maux.elemento(j,k)-(valor*maux.elemento(i,k)));
+			}
+		}
+	}
+
+	for(i=1; i<=maux.filas(); i++)
+	{
+		determinante = determinante * maux.elemento(i,i);
+	}
+
+
+	//cerr << "Retorno" << endl;*/
+
+	return determinante;
+ 
+}// fin determinanteIterativo
+
+template <class T> T determinanteRecursivo(Matriz <T> &m)
+{
+
+	T determinante=0.0;
+	int aux=1;
+	Matriz <double> auxiliar(m.filas()-1,m.columnas()-1);
+
+	if(m.filas()>2)
+	{
+		determinante=0.0;
+		for(int a=1;a<=m.filas();a++)
+		{
+			for(int i=2;i<=m.filas();i++)
+			{
+				aux=1;
+				for(int j=1;j<=m.columnas();j++)
+				{
+					if(j!=a)
+					{
+						auxiliar.elemento(i-1,aux,m.elemento(i,j));
+						aux++;
+					}
+					determinante += pow(-1,1+a) * m.elemento(1,a) * determinanteRecursivo(auxiliar);
+				}
+			}
+			//determinante += pow(-1,1+a) * m.elemento(1,a) * determinanteRecursivo(auxiliar);
+		}
+	}
+	else
+		if(m.filas()==2)
+			return (m.elemento(1,1)*m.elemento(2,2)) - (m.elemento(1,2)*m.elemento(2,1));
+		else
+			return m.elemento(1,1);
+
+	return determinante;
+}//fin determinanteRecursivo

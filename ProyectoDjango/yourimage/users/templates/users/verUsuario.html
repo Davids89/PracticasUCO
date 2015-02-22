@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+
+{% load users_extra %}
+
+{% block contenido %}
+
+	<div class="formularioSubirImagen">
+
+		<div class="usuario">
+			<h3>Usuario1: {{Usuario1.username}}</h3>
+			<div class="avatar">
+				{% if Usuario1.username == user.username %}
+					<a href="/users/cambiaAvatar/{{Usuario1.id}}"><img src='{{MEDIA_URL}}{{Usuario1.imagen}}' title="Cambiar tu avatar"></a>
+				{% else %}
+					<img src='{{MEDIA_URL}}{{Usuario1.imagen}}'></a>
+				{% endif %}
+			</div>
+
+			{% if user.username != Usuario1.username %}
+				<div class="seguir">
+					{% if Usuario1|isFollowing:user.id %}
+						<a href="/users/dejarSeguirUsuario/{{Usuario1.id}}"><button class="formularioSubirImagen" id="boton">Dejar de seguir <span class="glyphicon glyphicon-ok"></button></a>
+					{% else %}
+						<a href="/users/seguirUsuario/{{Usuario1.id}}"><button class="formularioSubirImagen" id="boton">Seguir <span class="glyphicon glyphicon-ok"></button></a>
+					{% endif %}
+				</div>
+			{% else %}
+				<p>Te siguen {{Usuario1.followers.count}} personas</p>
+			{% endif %}
+		</div>
+
+		<div class="seguidores">
+			<h3>Seguidores</h3>
+			{% for seguidor in Usuario1.followers.all %}
+				<div class="usuario2">{{seguidor.username}} <img src="{{MEDIA_URL}}{{seguidor.imagen}}" class="avatar2"></div>
+			{% endfor %}
+		</div>
+
+	</div>
+
+	<hr>
+
+	<div class="panelUsuario1">
+		<h3>Tableros: {{Tableros.count}}</h3>
+
+		{% if Tableros %}
+			{% for tablero in Tableros %}
+				
+				<div class="tablero">
+					<a href="/web/entraTablero/{{tablero.id}}">
+					<p>Nombre: {{tablero.nombre}}</p>
+					<p>Categoria: {{tablero.categoria}}
+					</p>
+					</a>
+				</div>
+
+			{% endfor %}
+		{% endif %}
+	</div>
+
+{% endblock %}

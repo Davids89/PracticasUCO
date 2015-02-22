@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<title>YourImage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="loguear">
+		<div class="loguear2">
+			<h1>Registro</h1>
+			<table class="table table-condensed">
+			<form id='form' method='post' action=''>{% csrf_token %}
+				<tr>
+					<td><span class="label label-primary">Nombre de usuario</span></td><td>{{formulario.username}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Contraseña</span></td><td>{{formulario.password1}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Repetir Contraseña</span></td><td>{{formulario.password2}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Email</span></td><td>{{formulario.email}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Nombre</span></td><td>{{formulario.first_name}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Apellido</span></td><td>{{formulario.last_name}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Pais</span></td><td>{{formulario.pais}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Genero</span></td><td>{{formulario.genero}}</td>
+				</tr>
+				<tr>
+					<td><span class="label label-primary">Estado civil</span></td><td>{{formulario.estado}}</td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Registrarse"></td>
+				</tr>
+			</form>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+</html>

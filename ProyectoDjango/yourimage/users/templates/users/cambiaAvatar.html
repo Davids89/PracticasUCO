@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+
+	<div class="formularioSubirImagen">
+		<h2>Cambiar avatar</h2>
+		<form name="cambiarAvatar" method="post" enctype="multipart/form-data">{% csrf_token %}
+			{{formulario.as_p}}
+			<input type="submit" value="Guardar">
+		</form>
+
+	</div>
+
+{% endblock %}

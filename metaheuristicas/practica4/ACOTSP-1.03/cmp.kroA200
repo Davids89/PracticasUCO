@@ -1,0 +1,52 @@
+
+ACO algorithms for the TSP, v1.03
+
+Parameter-settings: 
+
+max_tries		 3
+max_tours		 0
+max_time		 5.00
+seed		 1399894278
+optimum			 29368
+n_ants			 70
+nn_ants			 20
+alpha			 1.00
+beta			 2.00
+rho			 0.65
+q_0			 0.78
+elitist_ants		 0
+ras_ranks		 0
+ls_flag			 3
+nn_ls			 20
+dlb_flag		 1
+as_flag			 0
+eas_flag		 0
+ras_flag		 0
+mmas_flag		 0
+bwas_flag		 0
+acs_flag		 1
+
+begin problem instanciasTSP/kroA200.tsp
+seed 1399894278
+begin try 0 
+best 29477	 iteration 1	 tours 72	 time 0.020
+best 29451	 iteration 2	 tours 142	 time 0.020
+best 29368	 iteration 3	 tours 212	 time 0.040
+end try 0
+
+seed 2086874500
+begin try 1 
+best 29618	 iteration 1	 tours 72	 time 0.010
+best 29394	 iteration 2	 tours 142	 time 0.020
+best 29368	 iteration 3	 tours 212	 time 0.040
+end try 1
+
+seed 2091148338
+begin try 2 
+best 29594	 iteration 1	 tours 72	 time 0.010
+best 29483	 iteration 2	 tours 142	 time 0.020
+best 29394	 iteration 3	 tours 212	 time 0.030
+best 29368	 iteration 4	 tours 282	 time 0.040
+end try 2
+
+end problem kroA200

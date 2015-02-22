@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+		<form id='formulario' method='post' enctype="multipart/form-data">{% csrf_token %}
+			<div class="form-group">
+    			<label for="archivo">Seleccionar archivo</label>
+    			{{Imagen.imagen}}
+    			<p class="help-block">Para subir pulsa en "Guardar"</p>
+
+    			<select name="tablero">
+	  				{% for tablero in Tableros %}
+	  					<option>{{tablero.nombre}}</option>
+	  				{% endfor %}
+  				</select>
+  			</div>
+
+		<input type='submit' value='Guardar'>
+		</form>
+{% endblock %}

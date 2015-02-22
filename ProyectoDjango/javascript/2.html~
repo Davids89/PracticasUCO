@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body onload="boton()">
+	<script>
+		function boton()
+		{
+			document.write("Hola a todos");
+		}
+	</script>
+</body>
+</html>

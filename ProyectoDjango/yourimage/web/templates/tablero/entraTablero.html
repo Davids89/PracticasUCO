@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+
+{% load tablero_extra %}
+
+{% block contenido %}
+	{% if Tablero %}
+	<div class="barraSubirImagen">
+	<h3>Tablero: {{Tablero.nombre}}</h3>
+		{% if user.username == Tablero.autor.username %}
+		<div class="btn-group">
+	  		<button type="button" class="btn btn-default"><a href="/web/subirImagen/{{Tablero.id}}">Subir imagen</a></button>
+	  		<button type="button" class="btn btn-default"><a href="/web/editarTablero/{{Tablero.id}}">Editar</a></button>
+	  		<button type="button" class="btn btn-default"><a href="/web/borraTablero/{{Tablero.id}}">Borrar</button></a>
+		</div>
+		{% endif %}
+	</div>
+	{% endif %}
+
+	<div id="container">
+
+        {% for imagen in Imagenes %}
+
+            <a href="/web/verImagen/{{imagen.id}}">
+                <div class="cosaPrincipal">
+                    <center><img src="{{ MEDIA_URL }}{{imagen.imagen}}"></center>
+
+                    {% for tablero in imagen.imagenTablero.all %}
+                        <img class="avatar2" src="{{ MEDIA_URL }}{{tablero.autor.imagen}}"><a href="/users/verUsuario/{{tablero.autor.id}}">{{tablero.autor.username}}</a> 
+                        <div class="icono">{{imagen.like.count}} <a href="/web/meGusta/{{imagen.id}}"><span class="glyphicon glyphicon-ok-sign"></a></div>
+                        <div class="icono"><a href="/web/borrarImagen/{{imagen.id}}/{{Tablero.id}}"><span class="glyphicon glyphicon-trash"></a></div>
+                        <div class="nombreImagen">{{imagen.nombre}}</div>
+                    {% endfor %}
+
+                   
+                    <!--<a href="/main"><div class="icono" id="comentario" onclick="muestraComentario()"><span class="glyphicon glyphicon-align-left"></div></a>-->
+                </div>
+            </a>
+        {% endfor %}
+
+        <div class="paginacion">
+                {% if Imagenes.has_previous %}
+                    <a href="?page={{ Imagenes.previous_page_number }}">Anterior página</a>
+                {% endif %}
+
+                Page {{ Imagenes.number }} of {{ Imagenes.paginator.num_pages }}.
+
+                {% if Imagenes.has_next %}
+                    <a href="?page={{ Imagenes.next_page_number }}">Siguiente página</a>
+                {% endif %}
+
+
+            </div>
+
+        </div>
+
+	<script type="text/javascript">
+  		$(function(){
+  				$('#container').masonry({itemSelector : '.cosaPrincipal'});
+  		});
+	</script>
+	
+{% endblock %}

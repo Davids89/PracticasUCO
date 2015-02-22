@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+   <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+</HEAD>
+<BODY>
+<H3>Los numeros primos entre 1 y 100 son:</H3>
+<script language=javascript>
+var i,j,primo;
+document.write('1<br>');
+document.write('2<br>');
+document.write('3<br>');
+for(i=4;i<=100;i++)
+{
+    primo=0;
+    for(j=2;j<i;j++)
+    {
+		if(i%j==0) primo=1;
+    }
+    if (primo==0) {document.write(i); document.write('<br>');}
+}
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+
+<HTML>
+<HEAD>
+   <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<script language=javascript>
+</script>
+</HEAD>
+<BODY>
+<H3>Conversion de pesetas y euros</H3>
+
+<form name=monedas>
+Pesetas: <input type=text name=pesetas>
+<input type="button" value="Convertir a euros" onclick="if(!isNaN(this.form.pesetas.value)) this.form.c_euros.value=this.form.pesetas.value/166.386; else alert('No es un numero');">
+Euros: <input type=text name=c_euros readonly><input type=reset>
+<hr>
+Euros: <input type=text name=euros>
+<input type="button" value="Convertir a pesetas" onclick="if(!isNaN(this.form.euros.value)) this.form.c_pesetas.value=this.form.euros.value*166.386; else alert('No es un numero');">
+Pesetas: <input type=text name=c_pesetas readonly>
+</form>
+
+</BODY>
+</HTML>

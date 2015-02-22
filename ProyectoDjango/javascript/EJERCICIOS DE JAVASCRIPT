@@ -1,0 +1,67 @@
+EJERCICIOS DE JAVASCRIPT
+
+NIVEL BÁSICO    
+
+1) Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicación javascript de las que se ofrecen gratuitamente en esta página web.
+
+2) Primera página con Javascript. Realiza una página que contenga código JavaScript para escribir en el documento directamente el mensaje “Hola a todos”. Introduce comentarios en el código JavaScript haciendo uso de los símbolos siguientes // y /*. Repetir la página utilizando una función para escribir el texto, que se invoque cuando se entra en la página (onLoad).
+
+3) Barra de estado. Realiza una página que muestre un mensaje en la barra de estado. Modifica la función para que el mensaje se desplace por la barra de estado. (NOTA: Usa window.status).
+
+4) Pulsar botón. Realiza una página que muestre el mensaje “Hola a todos” en una ventana haciendo una llamada a una función JavaScript. Utilizar la función Alert().
+
+5) Entrada y salida de página. Realiza una página que muestre el mensaje "Bienvenido" al entrar en la página y muestre el mensaje "Adios" al salir de la página.
+
+6) Cálculo de números primos. Realiza una página para calcular los números primos entre 1 y 100.
+
+7) OnMouseOver(). Realiza una página que muestre cinco cuadrados de diferentes colores. Cuando el ratón pase por encima de alguno de ellos el color de fondo será del color de relleno del cuadrado.
+
+8) Conversor monetario. Realiza una página que muestre un formulario para la conversión de Euros a Pesetas o viceversa. Los campos del formulario han de poder ser limpiados.
+
+9) Password. Realiza una página que muestre una entrada protegida con password a una web.
+
+10 ) Saludo. Realiza una página que pregunte el nombre de entrada y muestre una página con un saludo con la fuente Comic Sans y de tamaño 10. Distinguir la hora del día para saber si es por la mañana, por la tarde o por la noche.
+
+NIVEL MEDIO
+
+1) Arrays. Leer una cadena de texto en un formulario y generar un array con la función split(). Posteriormente, mostrar la siguiente información: Número de palabras, primera palabra, última palabra, las palabras colocadas en orden inverso, las palabras ordenadas de la a la z y las palabras ordenadas de la z a la a. Sacar toda esta información en una ventana nueva.
+
+2) Coordenadas de ratón en la barra de estado. Realiza una página que capture las coordenadas de ratón y las muestre en la barra de estado.
+
+3) Reloj edit box. Realiza una página que muestre la fecha y la hora actual en un reloj que se va actualizando.
+
+4) Verificación formulario. Realiza una página que muestre un formulario y verifique la entrada de un número que esté comprendido entre 1..100.
+
+4) Test radio button. Realiza una página que efectúe test de evaluación a través de radio button de tres opciones. La página proporcionará la evaluación y las respuesta correctas a petición del usuario.
+
+5) Calculadora tabla formulario. Realiza una página implemente una calculadora aritmética. Para ello haz uso de una tabla y un formulario.
+
+6) Cambio de imágenes. Realiza una página que muestre una imagen que cambie cuando el ratón en pase por encima de la imagen y que vuelva a cambiar cuando salga de ella.
+
+7) Dado. Hacer una página que simule el lanzamiento de un dado.
+
+8) Esconder elementos. Realiza una página haga desaparecer elementos al paso del ratón y los muestre con un click de ratón sobre texto.
+
+9) Formulario Select. Realizar una página que permita modificar (añadir, borrar, modificar) al gusto del usuario los contenidos de un elemento SELECT de un formulario.
+
+10) Posición y tamaño. Realizar una página que permita controlar la posición y tamaño de otra ventana a través de un pequeño formulario.
+
+11) Estadística de cadenas de texto. Realiza una página que contenga una función JavaScript para hacer estadísticas sobre una cadena de texto que se le pase, contando el número de veces que aparece cada letra. Utilizar un Array para almacenar la información estadística.
+
+NIVEL AVANZADO
+
+1) Realiza un página web para jugar al ahorcado.
+
+2) Fotoslider. Realiza una página que muestre un proyector de fotografías.
+
+3) Capa. Realiza una página que ponga una imagen en el puntero del ratón haciendo uso de capas.
+
+4) Pillar botón. Realiza una página implemente que muestre un botón que se resista a ser pulsado.
+
+5) Ojos. Realiza una página que muestre una cara cuyos ojos sigan al cursor del ratón en su movimiento.
+
+6) Tres en raya. Realiza una página que muestre un tablero de botones de tres por tres para jugar a las tres en raya.
+
+7) Puzzle. Hacer un juego de un puzzle con una tabla de 4x4 y las imágenes correspondientes del 1 al 15, dejando un hueco para el movimiento.
+
+8) Paleta colores. Realiza una página que muestre una paleta de colores y que al seleccionar con el ratón un color cambie el color de fondo de la página.

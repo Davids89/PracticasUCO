@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+		<form id='formulario' method='post' action='' enctype="multipart/form-data">{% csrf_token %}
+			<div class="formularioSubirImagen">
+                <div class="form-group">
+      	             <label for="archivo">Seleccionar archivo</label>{{formulario.imagen}}
+    			</div>
+
+    			<div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label for="Nombre">Nombre</label></td><td>{{formulario.nombre}}</td>
+                        </tr>
+                        <tr>
+                            <td><label>Elija una categoría</label></td><td> {{formulario.categoria}}</td>
+                        </tr>
+                        <tr>
+                            <td><input type='submit' value='Guardar' class="formularioSubirImagen" id="boton"></td></tr>
+                    <p class="help-block">Para subir pulsa en "Guardar"</p>
+    			</div>
+        </div>
+		</form>
+{% endblock %}

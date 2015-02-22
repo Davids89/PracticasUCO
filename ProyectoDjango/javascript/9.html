@@ -1,0 +1,55 @@
+
+<HTML>
+<HEAD>
+<TITLE>Objeto Select</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function informar(){
+
+    var mensaje = "Usuario no autorizado...";
+    var usuarios = new Array(3);
+    var claves = new Array(3);
+    
+    usuarios[0] = "CARLOS";
+    usuarios[1] = "JUAN";
+    usuarios[2] = "PEPE";
+
+    claves[0] = "12345"
+    claves[1] = "axcds"
+    claves[2] = "atr99"
+
+    for (i=0; i<usuarios.length; i++){
+        if ((usuarios[i]==document.miFormulario.usuario.value.toUpperCase())
+            && (claves[i]==document.miFormulario.password.value)){
+            mensaje = "Bienvenido al sistema...";
+            break;
+        }
+    } 
+  
+    alert(mensaje);
+    document.miFormulario.botonLimpiar.click();
+    document.miFormulario.usuario.focus();
+  
+  }
+ 
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando el objeto password...</H2>
+<FORM NAME="miFormulario" ACTION="javascript:informar()">
+Introduzca su usuario y clave...<BR><BR>
+<TABLE CELLPADDING=5>
+<TR ALIGN=RIGHT>
+<TD>usuario:</TD><TD><INPUT TYPE=TEXT NAME="usuario" SIZE=15></TD></TR>
+<TR ALIGN=RIGHT>
+<TD>clave:</TD><TD><INPUT TYPE=PASSWORD NAME="password" SIZE=15></TD></TR>
+</TABLE><BR>
+<INPUT TYPE=SUBMIT NAME="botonEnviar" VALUE="Enviar">
+<INPUT TYPE=RESET NAME="botonLimpiar" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

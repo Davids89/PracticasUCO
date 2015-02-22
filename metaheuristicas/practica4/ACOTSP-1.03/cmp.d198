@@ -1,0 +1,63 @@
+
+ACO algorithms for the TSP, v1.03
+
+Parameter-settings: 
+
+max_tries		 3
+max_tours		 0
+max_time		 5.00
+seed		 1399894279
+optimum			 15780
+n_ants			 70
+nn_ants			 20
+alpha			 1.00
+beta			 2.00
+rho			 0.65
+q_0			 0.78
+elitist_ants		 0
+ras_ranks		 0
+ls_flag			 3
+nn_ls			 20
+dlb_flag		 1
+as_flag			 0
+eas_flag		 0
+ras_flag		 0
+mmas_flag		 0
+bwas_flag		 0
+acs_flag		 1
+
+begin problem instanciasTSP/d198.tsp
+seed 1399894279
+begin try 0 
+best 15835	 iteration 1	 tours 72	 time 0.020
+best 15812	 iteration 2	 tours 142	 time 0.030
+best 15794	 iteration 5	 tours 352	 time 0.070
+best 15791	 iteration 8	 tours 562	 time 0.110
+best 15788	 iteration 10	 tours 702	 time 0.130
+best 15781	 iteration 14	 tours 982	 time 0.180
+best 15780	 iteration 130	 tours 9102	 time 1.640
+end try 0
+
+seed 918412994
+begin try 1 
+best 15833	 iteration 1	 tours 72	 time 0.020
+best 15793	 iteration 2	 tours 142	 time 0.030
+best 15787	 iteration 10	 tours 702	 time 0.130
+best 15786	 iteration 11	 tours 772	 time 0.140
+best 15783	 iteration 12	 tours 842	 time 0.160
+best 15782	 iteration 19	 tours 1332	 time 0.250
+best 15780	 iteration 76	 tours 5322	 time 0.960
+end try 1
+
+seed 1950643906
+begin try 2 
+best 15883	 iteration 1	 tours 72	 time 0.020
+best 15849	 iteration 2	 tours 142	 time 0.030
+best 15829	 iteration 3	 tours 212	 time 0.040
+best 15807	 iteration 4	 tours 282	 time 0.060
+best 15792	 iteration 6	 tours 422	 time 0.080
+best 15791	 iteration 8	 tours 562	 time 0.110
+best 15780	 iteration 44	 tours 3082	 time 0.560
+end try 2
+
+end problem d198

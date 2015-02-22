@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+	<div class="forEdicionUsuario">
+	<form method='post' action=''>{% csrf_token %}
+		<table class="table table-condensed">
+			<tr>
+				<td><span class="label label-success">Nombre de usuario</span></td><td>{{formulario.username}}</td>
+			</tr>
+			<tr>
+				<td><span class="label label-success">Nombre</span></td><td>{{formulario.first_name}}</td>
+			</tr>
+			<tr>
+				<td><span class="label label-success">Apellido</span></td><td>{{formulario.last_name}}</td>
+			</tr>
+		</table>
+		<input type="submit" value="Guardar datos" class="btn btn-default">
+	</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+Colocar el archivo de OpenCV en /usr/local/src. Aqui se coloca el tar.gz. Hay que pertecer al grupo src para a la hora de compilar no tener que usar root.
+
+Descomprimimos con tar 
+
+Entramos en OpenCV
+
+Creamos una carpeta para guardar los proyectos (build)
+
+Ejecutamos cmake: cmake-gui. Tenemos que decirle las fuentes y donde queremos construir. Hay que instalarlo aparte (apt-get cmake-gui)
+	cmake-gui .. & 
+	Raiz /usr/local/src/OpenCV-2.4.4
+	Binarios /usr/local/src/OpenCV-2.4.4/build
+
+Damos en Configure. Elegimos UNIX Makefiles.
+
+en CMAKE_BUILD_TYPE escribir Release
+
+Le damos otra vez a Configure
+
+Damos a Generate.
+
+Salimos y debemos compilar: make (-j 8, esto es para 4 nucleos)
+
+Ahora escribimos: sudo make install 

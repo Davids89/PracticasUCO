@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+   <META content="Microsoft FrontPage 4.0" name=GENERATOR>
+</HEAD>
+   <BODY>
+ <script language="JavaScript">
+<!--
+var name=prompt("Introduce tu nombre, por favor.","nombre");
+var today = new Date ()
+var hrs = today.getHours();
+document.writeln("<b><font size=4 face='Comic Sans MS'>");
+document.writeln("<b>");
+if (hrs <= 12)
+        document.write("Buenos dias "+name+'!');
+else if (hrs <= 22)
+        document.write("Buenas tardes "+name+'!');
+else
+     document.write("Buenas noches "+name+'!'); document.writeln("<br>");
+// -->
+</script>
+   </BODY>
+</HTML>

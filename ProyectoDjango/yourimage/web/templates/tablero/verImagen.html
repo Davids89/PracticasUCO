@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+
+	<div class="mostrarImagen">
+		<center><img class="mostrarImagenImg" src="{{MEDIA_URL}}{{Imagen.imagen}}"></center>
+		<hr>
+		<div class="cajaImagen">
+			<a href="/users/verUsuario/{{Propietario.id}}">
+				<div class="cajaImagenUsuario">
+					{{Propietario.username}}<img src="{{MEDIA_URL}}{{Propietario.imagen}}" class="avatar2">
+				</div>
+			</a>
+
+			<div class="cajaImagenLike">
+				<div class="iconoCajaImagenLike">
+					{{Imagen.like.count}} <a href="/web/imagenGusta/{{Imagen.id}}"><span class="glyphicon glyphicon-ok-sign"></a>
+				</div>
+			</div>
+
+			<div class="cajaTexto">
+				<p>{{Imagen.nombre}}</p>
+			</div>
+			
+		</div>
+	</div>
+
+{% endblock %}

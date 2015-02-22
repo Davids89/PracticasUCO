@@ -1,0 +1,11 @@
+@relation test-cpu
+
+@attribute a numeric
+@attribute b numeric
+@attribute class numeric
+
+@data
+1,-1,1
+-1,-1,0
+-1,1,1
+1,1,0

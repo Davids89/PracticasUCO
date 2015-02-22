@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+
+	<h3>Resultados de busqueda: {{Busqueda}}</h3>
+	<hr>
+	{% if Usuarios %}
+
+		<h3>Usuarios</h3>
+			{% for usuario in Usuarios %}
+				<a href="/users/verUsuario/{{usuario.id}}">{{usuario.username}}</a>
+			{% endfor %}
+
+	{% endif %}
+	
+	{% if Imagenes %}
+
+		<h3>Imagenes</h3>
+		{% for imagen in Imagenes %}
+			<img src="{{MEDIA_URL}}{{imagen.imagen}}" class="imagenBuscada">
+		{% endfor %}
+
+	{% endif %}
+
+	{% if Tableros %}
+
+		<h3>Tableros</h3>
+		{% for tablero in Tableros %}
+			<a href="/web/entraTablero/{{tablero.id}}">{{tablero.nombre}}</a>
+		{% endfor %}
+
+	{% endif %}
+
+{% endblock %}

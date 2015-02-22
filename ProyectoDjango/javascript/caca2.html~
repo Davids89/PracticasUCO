@@ -1,0 +1,13 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<script>
+		document.write("<h2>Hola a todos</h2>")
+	</script>
+</body>
+
+</html>

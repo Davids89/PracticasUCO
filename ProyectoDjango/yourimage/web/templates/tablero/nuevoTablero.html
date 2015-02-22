@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+
+	<div class="formularioSubirImagen">
+		<form id='formulario' method='post' action=''>{% csrf_token %}
+			<table>
+				<tr>
+					<td><label>Nombre del tablero:</td><td>{{formulario.nombre}}</label></td>
+				</tr>
+				<tr>
+					<td><label>Categoria:</td><td>{{formulario.categoria}}</label></td>
+				</tr>
+				<tr>
+					<td><input type='submit' value='Guardar'></td></tr>
+		</form>
+	</div>
+
+{% endblock %}

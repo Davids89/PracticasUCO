@@ -1,0 +1,20 @@
+metodo local con umbral local
+
+Distancia levenshtein V1: 116
+Distancia levenshtein V2: 88
+Distancia levenshtein V3: 178
+Distancia levenshtein V4: 43
+
+metodo global
+
+Distancia levenshtein V1: 114
+Distancia levenshtein V2: 72
+Distancia levenshtein V3: 146
+Distancia levenshtein V4: 61
+
+metodo global con black hat
+
+Distancia levenshtein V1: 127
+Distancia levenshtein V2: 72
+Distancia levenshtein V3: 140
+Distancia levenshtein V4: 46

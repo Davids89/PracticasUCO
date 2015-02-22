@@ -1,0 +1,46 @@
+<html>
+
+<head>
+	<title>YourImage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="loguear">
+		<div class="loguear2">
+			<h1>Loguear</h1>
+			<table>
+				<tr>
+					<form id='form' method='post' action=''>{% csrf_token %}
+					
+					<div class="form-group">
+			    		<td><label for="Nombre de usuario">Nombre de usuario:</label></td>
+			    		<td>{{form.username}}</td>
+			  		</div>
+		  		</tr>
+		  		
+		  		<tr>
+			  		<div class="form-group">
+			    		<td><label for="Password">Contraseña:</label></td>
+			    		<td>{{form.password}}</td>
+			  		</div>
+		  		</tr>
+
+		  		<tr>
+					<td><input type='submit' value="Iniciar sesion"></tr>
+				</tr>
+				</form>
+			</table>
+		</div>
+
+	 <footer>
+		<h3>Copyright © David</h3>
+	</footer>
+
+	</div>
+
+</body>
+<html>

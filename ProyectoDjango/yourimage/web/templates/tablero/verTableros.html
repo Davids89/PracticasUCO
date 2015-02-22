@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% block contenido %}
+	<div class="generalTablero">
+
+		<h3>Perfil <span class="label label-default">{{user.username}}</span></h3>
+
+		<div class="panelUsuario">
+			<div class="perfilUsuario3">
+				<img src='{{MEDIA_URL}}{{usuario.imagen}}' class="avatar3">
+			</div>
+			<div class="perfilUsuario1">
+				{% if usuario %}
+					<h2>{{usuario.first_name}} {{usuario.last_name}}</h2>
+				{% else %}
+					<h2>No eres nadie</h2>
+				{% endif %}
+				<div class="editaPerfil">
+					<a href="/users/editarUsuario/{{usuario.id}}"><span class="glyphicon glyphicon-pencil"></a>
+				</div>
+			</div>
+
+			<div class="perfilUsuario2">
+				<h4>Te siguen</h4>
+				{% for seguidor in usuario.followers.all %}
+					{{seguidor.username}} <img src="{{MEDIA_URL}}{{seguidor.imagen}}" class="avatar2">
+				{% endfor %}
+			</div>
+			<div class="perfilUsuario2">
+				<h4>Sigues a</h4>
+				{% for siguiendo in usuario.following.all %}
+					{{siguiendo.username}} <img src="{{MEDIA_URL}}{{siguiendo.imagen}}" class="avatar2">
+				{% endfor %}
+			</div>
+
+		</div>
+
+		<div class="panelUsuario">
+			<h3>Mis tableros</h3>
+			<a href="nuevoTablero">
+			<div class="tablero" id="creaTablero">
+				<p>Crear nuevo tablero</p><h1><center><span class="glyphicon glyphicon-plus-sign"></center></h1>
+			</div></a>
+
+			{% if Tablero %}
+				{% for tablero in Tablero %}
+					
+					<div class="tablero">
+						<a href="entraTablero/{{tablero.id}}">
+						<p>Nombre: {{tablero.nombre}}</p>
+						<p>Categoria: {{tablero.categoria}}</p>
+						<p>Imagenes: {{tablero.imagen.count}}</p>
+						</a>
+					</div>
+
+				{% endfor %}
+
+			</div>
+			{% endif %}
+		</div>
+
+	</div>
+{% endblock %}
