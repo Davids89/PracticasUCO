@@ -1,8 +1,8 @@
-###Prácticas Universidad de Córdoba###
+### Prácticas Universidad de Córdoba
 
-###David Luque Quintana###
+### David Luque Quintana
 
-###Grado en Ingeniería Informática - Computación###
+### Grado en Ingeniería Informática - Computación
 
 - Algorítmica: código en C++
 - Bison: intérprete de Bison para Procesadores de Lenguajes
